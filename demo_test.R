@@ -1,4 +1,4 @@
-
+library(tidyverse)
 
 
 start_N <- 100
@@ -10,7 +10,7 @@ N_through_time <- c(start_N)
 num_generations <- 100
 
 N_t <- start_N
-for(t in 1:num_generations) {
+for (t in 1:num_generations) {
    # first we do death
   num_dead <- rbinom(n = 1, size = N_t, prob = death_rate)
   N_t <- N_t - num_dead
@@ -37,7 +37,7 @@ sim_demography <- function(N_0,
 
   N_through_time <- c(N_0)
   N_t <- N_0
-  for(t in 1:num_generations) {
+  for (t in 1:num_generations) {
     # first we do death
     num_dead <- rbinom(n = 1, size = N_t, prob = death_rate)
     N_t <- N_t - num_dead
@@ -57,7 +57,7 @@ sim_demography <- function(N_0,
 
 # now we can do many runs:
 to_plot <- c()
-for(r in 1:100) {
+for (r in 1:100) {
   simulation_result <- sim_demography(N_0 = 1000,
                                       birth_rate = 1.1,
                                       death_rate = 0.1,
