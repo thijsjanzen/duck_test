@@ -91,6 +91,10 @@ to_plot %>%
     ylab("Population Size")
 
 
+# now, how would you modify sim_demography to include:
+#   - adding a fixed number of birds?
+#   - shooting a fixed number of birds?
+
 
 
 
